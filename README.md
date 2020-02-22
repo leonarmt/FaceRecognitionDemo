@@ -10,16 +10,34 @@ ARMT Face Recognition SDK Demo
     GPIO口有两种控制方式，消息方式或者调用函数。
 1）光灯控制
     消息控制方式
-                    补光灯                                          绿色指示灯                                        红色指示灯
- 开        com.android.intent.OpenWhiteFlashlight      com.android.intent.OpenGreenFlashlight        com.android.intent.OpenRedFlashlight
- 关        com.android.intent.CloseWhiteFlashlight     com.android.intent.CloseGreenFlashlight       com.android.intent.CloseRedFlashlight
+        补光灯
+  com.android.intent.OpenWhiteFlashlight //开
+  com.android.intent.CloseWhiteFlashlight //关
+       绿色指示灯
+  com.android.intent.OpenGreenFlashlight //开
+  com.android.intent.CloseGreenFlashlight //关
+       红色指示灯
+  com.android.intent.OpenRedFlashlight //开
+  com.android.intent.CloseRedFlashlight //关
 
      调用函数方式
-                      补光灯                                          绿色指示灯                                        红色指示灯
-         GPIOPort port = new GPIOPort(169);                    GPIOPort port = new GPIOPort(171);         GPIOPort port = new GPIOPort(162);
-         port.enable_out();                                    port.enable_out();                         port.enable_out();
- 开      port.write(1);                                        port.write(1);                             port.write(1);
- 关      port.write(0);                                        port.write(0);                             port.write(0);
+     补光灯
+     GPIOPort port = new GPIOPort(169);
+     port.enable_out();
+     port.write(1); //开
+     port.write(0); //关
+
+    绿色指示灯
+    GPIOPort port = new GPIOPort(171);
+    port.enable_out();
+    port.write(1); //开
+    port.write(0); //关
+
+    红色指示灯
+    GPIOPort port = new GPIOPort(162);
+    port.enable_out();
+    port.write(1); //开
+    port.write(0); //关
 
 2）继电器(开门)控制
     消息控制方式
@@ -35,7 +53,7 @@ ARMT Face Recognition SDK Demo
 
  3) 人体感应
 
-     人体感应状态通过消息方式获取,参照类FaceReceiver
+    人体感应状态通过消息方式获取,参照类FaceReceiver
     com.android.intent.BodyIn  //检测到人体进入
     com.android.intent.BodyOut //检测到人体离开
 
