@@ -2,11 +2,14 @@
 ARMT Face Recognition SDK Demo
 
 深圳市艾默特技术有限公司 人脸识别主板SDK使用说明
+
 一、适用范围
+
 1）本SDK Demo适用于AIS906，AIS908，AIS919主板。
 2）本SDK Demo主要用于对主板端口状态的控制以及监控，不含有人脸识别功能。
 
 二、GPIO口控制
+
     GPIO口有两种控制方式，消息方式或者调用函数。
 
 1）光灯控制
