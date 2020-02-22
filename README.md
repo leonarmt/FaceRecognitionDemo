@@ -24,32 +24,33 @@ ARMT Face Recognition SDK Demo
 2）继电器(开门)控制
     消息控制方式
                     补光灯
- 开       com.android.intent.OpenRelay
- 关       com.android.intent.CloseRelay
+       com.android.intent.OpenRelay  //开
+       com.android.intent.CloseRelay //关
 
     调用函数方式
           GPIOPort port = new GPIOPort(65);
           port.enable_out();
- 开       port.write(1);
- 关       port.write(0);
+          port.write(1);//打开
+          port.write(0);//关闭
 
  3) 人体感应
 
-     人体感应状态通过消息方式获取
-                       人体感应状态
- 检测到人体进入   com.android.intent.BodyIn
- 检测到人体离开   com.android.intent.BodyOut
+     人体感应状态通过消息方式获取,参照类FaceReceiver
+    com.android.intent.BodyIn  //检测到人体进入
+    com.android.intent.BodyOut //检测到人体离开
 
  三、导航栏与状态栏
-    通过消息方式控制
-                  导航栏                                         状态栏
-  显示    com.android.intent.EnableNavigation       com.android.intent.EnableStatusbar
-  关闭    com.android.intent.DisableStatusbar       com.android.intent.DisableNavigation
+    通过消息方式控制：
+  显示导航栏    com.android.intent.EnableNavigation
+  关闭导航栏    com.android.intent.DisableStatusbar
+  显示状态栏  com.android.intent.EnableStatusbar
+  关闭状态栏  com.android.intent.DisableNavigation
 
-     调用函数
-                   导航栏                                         状态栏
-  显示    DeviceManager.showNavigationBar()           DeviceManager.showStatusBar()
-  关闭    DeviceManager.removeNavigationBar()         DeviceManager.showNavigationBar()
+    调用函数：
+  显示导航栏    DeviceManager.showNavigationBar()
+  关闭导航栏    DeviceManager.removeNavigationBar()
+  显示状态栏    DeviceManager.showStatusBar()
+  关闭状态栏    DeviceManager.showNavigationBar()
 
   四、韦根发送
   参见类WiegandActivity
